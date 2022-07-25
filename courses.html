@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="UCCD2323-ASSIGNMENT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./css/default.css">
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+    <title>Courses</title>
+
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html" style=" padding-left: 20px;font-size: 30px"><img
+                src="images/logo.png" alt="logo"
+                style="margin: 1px 2px">eTuition</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="homepage.html">Homepage</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle" href="courses.html" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="courses.html">Web Programming</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Javascript Fundamentals</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Basic of Photo Editing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Discrete Mathematics</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Python Programming</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link customBtn" onclick="window.location.href='registerForm.html'">Register Now
+                        <span id="courseCount" class="badge badge-warning"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container" id="custom-container">
+    <div class="pageTitleBox">
+        <div class="whiteBox">
+            <h1 class="movingTitle">Courses Available</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 col-sm-6">
+            <div class="course-grid">
+                <div class="course-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/course11.png">
+                        <img class="pic-2" src="images/course12.jpeg">
+                    </a>
+
+                    <h3 class="courseName"><a href="#">Web Programming</a></h3>
+                    <p class="description">Basic of web development, which includes the Web Content, Web Client and
+                        server scripting. Language used : XML, HTML, JavaScript and PHP</p>
+                    <button class="addToRegister" type="button" data-id="C01" value="C01">Add to Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="course-grid">
+                <div class="course-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/course21.jpeg">
+                        <img class="pic-2" src="images/course22.png">
+                    </a>
+
+                    <h3 class="courseName"><a href="#">Javascript Fundamentals</a></h3>
+                    <p class="description">The Fundamentals of script building for websites effects, scripts, reactions
+                        and pointers movements that runs automatically as the pages load. </p>
+                    <button class="addToRegister" type="button" data-id="C02" value="C02">Add to Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="course-grid">
+                <div class="course-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/course31.jpeg">
+                        <img class="pic-2" src="images/course32.jpeg">
+                    </a>
+                    <h3 class="courseName"><a href="#">Basic of Photo Editing</a></h3>
+                    <p class="description">To learn on how to edit your photographs like a professional. Creating the
+                        ideal photograph, Adobe Photoshops, Lightroom software basics.</p>
+                    <button class="addToRegister" type="button" data-id="C03" value="C03">Add to Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="course-grid">
+                <div class="course-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/course41.jpeg">
+                        <img class="pic-2" src="images/course42.jpeg">
+                    </a>
+                    <h3 class="courseName"><a href="#">Discrete Mathematics</a></h3>
+                    <p class="description">Study the Mathematical Structures in discrete rather than continuous basic.
+                        Dealing with unknown variables, truth tables and binaries.</p>
+                    <button class="addToRegister" type="button" data-id="C04" value="C04">Add to Register</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+            <div class="course-grid">
+                <div class="course-image">
+                    <a href="#">
+                        <img class="pic-1" src="images/course51.jpeg">
+                        <img class="pic-2" src="images/course52.jpeg">
+                    </a>
+                    <h3 class="courseName"><a href="#">Python Programming</a></h3>
+                    <p class="description">The high-level programming language which design to emphasizes the code
+                        readability. Basic and Advance of Python Programming.</p>
+                    <button class="addToRegister" type="button" data-id="C05" value="C05">Add to Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="copyright bg-light">
+        <p>&copy 2021 - eTuition Online Platform</p>
+    </div>
+</footer>
+
+
+<!--scripts-->
+<script src="./js/anime.min.js"></script>
+
+<!--script for add course to register form -->
+<script>
+    $(document).ready(function () {
+        addCourse();
+    });
+</script>
+
+<!-- script for moving text -->
+<script>
+    var textWrapper = document.querySelector('.movingTitle');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline()
+        .add({
+            targets: '.movingTitle .letter',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 600 + 30 * i
+        })
+</script>
+
+<script src="./js/default.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/sweetalert2.all.min.js"></script>
+
+</body>
+</html>

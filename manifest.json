@@ -1,0 +1,22 @@
+{
+  "name": "UCCD2323 GROUP-ASSIGNMENT",
+  "short_name": "UCCD2323-ASSIGN",
+  "lang": "en-US",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#FFFFFF",
+  "description": "UCCD2323 WEB GROUP ASSIGNMENT",
+  "icons": [
+    {
+      "src": "images/icon-65x65.png",
+      "sizes": "65x65",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    }
+  ]
+}

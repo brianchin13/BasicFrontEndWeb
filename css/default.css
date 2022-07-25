@@ -1,0 +1,709 @@
+/*General css*/
+/*----------------------------*/
+
+body {
+    display: grid;
+    padding: 3vmin;
+    background: #e6ded7;
+}
+
+header {
+    font-family: "Courier New", Courier, monospace;
+}
+
+footer {
+    width: auto;
+    display: inline-block;
+    height: 70px;
+    margin: 1%;
+}
+
+#custom-container {
+    max-width: 98%
+}
+
+.container {
+    max-width: 38em;
+    padding: 1em 3em 2em 3em;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4.2px;
+    box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+    zoom: 1;
+    padding: 0 8px 0 8px;
+}
+
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
+
+.nav-item {
+    padding-right: 28px;
+    font-size: 19px;
+}
+
+.navbar {
+    margin: 0 10px 1% 1%;
+    position: fixed;
+
+}
+
+.copyright p {
+    text-align: center;
+    color: black;
+    font-size: 0.7em;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+.pageTitleBox {
+    padding: 3px;
+    text-align: center;
+    background-image: url("../images/boxbg.png");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    margin-bottom: 20px;
+    height: 170px;
+    border-radius: 5px;
+}
+
+
+.whiteBox {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    background: white;
+    width: 100%;
+    height: 90px;
+}
+
+
+/* Homepage css */
+/*----------------------------*/
+
+.carousel-caption {
+    margin-bottom: 10%;
+    font-family: 'Bell MT', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.carousel-caption h1 {
+    font-size: 65px;
+}
+
+.carousel-caption p {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+.info {
+    background-image: url("../images/infobg.jpeg");
+    padding: 5rem 0;
+    margin: 0 1% 0 1%;
+}
+
+.infoBox {
+    border-left: 3px solid;
+    padding-left: 3.5rem;
+}
+
+.customBtn {
+    border-radius: 8px;
+    border: 2px solid darkgray;
+    font-size: 16px;
+}
+
+.customBtn:hover {
+    box-shadow: 2px 2px 10px #888888;
+}
+
+
+@media only screen and (max-width: 800px) and (min-width: 500px) {
+    .carousel-item img {
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .carousel-caption {
+        margin-bottom: 3%;
+        font-family: 'Bell MT', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .carousel-caption h1 {
+        font-size: 35px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 900px) {
+
+    .carousel-caption {
+        margin-bottom: 5%;
+        font-family: 'Bell MT', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    .carousel-caption h1 {
+        font-size: 40px;
+    }
+
+    .carousel-caption p {
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+
+}
+
+.modal-content {
+    padding: 2rem 3rem;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+    border: 0;
+    padding: 0;
+}
+
+.mf-close-btn {
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: 0 transparent;
+    width: auto;
+}
+
+.mf-col {
+    width: 100%;
+}
+
+
+/* Courses css*/
+/*----------------------------*/
+
+/* moving letter css */
+.movingTitle {
+    font-weight: 1500;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: black;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    margin-bottom: 20px;
+    border-bottom: 1px solid black;
+
+}
+
+.movingTitle .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.course-grid {
+    font-family: Poppins, sans-serif;
+    position: relative;
+    z-index: 1
+}
+
+.course-grid .course-image {
+    border: 1px solid #e4e9ef;
+    position: relative;
+    transition: all .3s ease 0s;
+    margin: 5px 0 10px;
+}
+
+.course-grid:hover .course-image {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15)
+}
+
+.course-grid .course-image a {
+    display: block
+}
+
+.course-grid .course-image img {
+    width: 100%;
+    height: 200px
+}
+
+.course-grid .pic-1 {
+    opacity: 1;
+    transition: all .5s ease-out 0s
+}
+
+.course-grid:hover .pic-1 {
+    opacity: 0
+}
+
+.course-grid .pic-2 {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .5s ease-out 0s
+}
+
+.course-grid:hover .pic-2 {
+    opacity: 1
+}
+
+.course-grid .courseName {
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 15px 5px 8px;
+    transition: all .3s ease 0s
+}
+
+.course-grid .courseName a {
+    color: #000
+}
+
+.course-grid .description {
+    margin-left: 5px;
+    color: rgba(0, 0, 0, .5)
+}
+
+.course-grid .addToRegister {
+    display: block;
+    color: #fff;
+    background-color: #2e353b;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 22px 5px;
+    transition: all .5s ease 0s
+}
+
+.course-grid .addToRegister:hover {
+    background-color: #0081c2
+}
+
+@media only screen and (max-width: 990px) {
+    .course-grid {
+        margin-bottom: 30px
+    }
+}
+
+
+/*Contact us*/
+/*----------------------------*/
+.icon-bar {
+    position: fixed;
+    top: 60%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.google {
+    background: #dd4b39;
+    color: white;
+}
+
+textarea:focus {
+    outline: 0;
+    border-color: #bd8200;
+}
+
+.workingHour {
+    border-radius: 10px;
+    width: auto;
+    height: 553px;
+    padding: 30px;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 500px) {
+    form {
+        margin-top: 10px
+    }
+}
+
+
+/*about page css*/
+/*----------------------------*/
+
+.title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.status {
+    padding: 10px;
+}
+
+.sub-title {
+    border-left: 2px solid #f0a500;
+    padding: 10px;
+}
+
+.details {
+    padding: 30px 0;
+    border-bottom: 2px solid #f0a500;
+    margin-bottom: 5%;
+}
+
+.details .details-box {
+    width: 100%;
+    text-align: center;
+}
+
+.details .details-box span {
+    font-size: 48px;
+    line-height: 48px;
+    display: block;
+    font-weight: 700;
+    color: #f0a500;
+    margin-left: 80px;
+    margin: auto;
+}
+
+.details .details-box p {
+    padding: 8px 0 0 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+}
+
+.tutor {
+    padding-top: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.tutorBox {
+    box-shadow: 0px 2px 15px rgba(18, 66, 101, 0.08);
+    padding: 5px;
+}
+
+.tutor .tutor-img {
+    position: relative;
+    overflow: hidden;
+    width: 270px;
+    height: 180px;
+    padding: 10px;
+}
+
+.tutor .tutor-info {
+    padding: 25px 15px;
+}
+
+.tutor .tutor-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #f0a500;
+}
+
+.tutor .tutor-info span {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    color: #aaaaaa;
+}
+
+.tutor .tutor-info p {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 26px;
+    color: #777777;
+    padding-top: 5px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .tutor .tutor-img {
+        position: relative;
+        overflow: hidden;
+        width: 400px;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1300px) {
+    .tutor .tutor-img {
+        position: relative;
+        overflow: hidden;
+        width: 180px;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1499px) {
+    .tutor .tutor-img {
+        position: relative;
+        overflow: hidden;
+        width: 280px;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+
+@media only screen and (min-width: 1500px) {
+    .tutor .tutor-img {
+        position: relative;
+        overflow: hidden;
+        width: 340px;
+        height: 180px;
+        padding: 10px;
+    }
+}
+
+
+/*registerForm css*/
+/*----------------------------*/
+.formTitle {
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.registerForm {
+    padding: 15px;
+    margin-left: 28%;
+}
+
+h4 {
+    color: #f0a500;
+}
+
+textarea,
+input,
+button,
+input[type="radio"] + label,
+input[type="checkbox"] + label:before,
+select option,
+select {
+    width: 100%;
+    padding: 1em;
+    line-height: 1.4;
+    background-color: #f9f9f9;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+}
+
+input:focus {
+    outline: 0;
+    border-color: #bd8200;
+}
+
+input:focus + .input-icon i {
+    color: #f0a500;
+}
+
+input:focus + .input-icon:after {
+    border-right-color: #f0a500;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label,
+select {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    float: left;
+    border-radius: 0;
+}
+
+input[type="radio"] + label:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+input[type="radio"] + label:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+input[type="radio"] + label i {
+    padding-right: 0.4em;
+}
+
+input[type="radio"]:checked + label,
+input:checked + label:before,
+select:focus, button:hover,
+select:active {
+    background-color: #f0a500;
+    color: #fff;
+    border-color: #bd8200;
+}
+
+input:checked + label:after {
+    opacity: 1;
+}
+
+select {
+    height: 3.4em;
+    line-height: 2;
+}
+
+select:first-of-type {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+select:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+select:focus,
+select:active {
+    outline: 0;
+}
+
+select option {
+    background-color: #f0a500;
+    color: #fff;
+}
+
+
+.input-group {
+    margin-bottom: 1em;
+    zoom: 1;
+}
+
+.input-group:before,
+.input-group:after {
+    content: "";
+    display: table;
+}
+
+.input-group:after {
+    clear: both;
+}
+
+.input-group-icon {
+    position: relative;
+}
+
+.input-group-icon input {
+    padding-left: 4.4em;
+}
+
+.input-group-icon .input-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.4em;
+    height: 3.4em;
+    line-height: 3.4em;
+    text-align: center;
+    pointer-events: none;
+}
+
+.input-group-icon .input-icon:after {
+    position: absolute;
+    top: 0.6em;
+    bottom: 0.6em;
+    left: 3.4em;
+    display: block;
+    border-right: 1px solid #e5e5e5;
+    content: "";
+}
+
+
+.col-half {
+    width: 65%;
+}
+
+.col-half:last-of-type {
+    padding-right: 0;
+}
+
+.col-third {
+    padding-right: 10px;
+    float: left;
+    width: 33.33333333%;
+}
+
+.col-third:last-of-type {
+    padding-right: 0;
+}
+
+@media only screen and (max-width: 700px) and (min-width: 500px) {
+    .col-half {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .registerForm {
+        padding: 15px;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 700px) {
+    .col-half {
+        width: 85%;
+        padding-right: 0;
+    }
+
+    .registerForm {
+        padding: 15px;
+        margin-left: 16%;
+    }
+}
+
+.custom-thead {
+    border-color: #bd8200;
+    background-color: #f0a500;
+    color: white;
+}
+
+
+table {
+    margin-bottom: 5px;
+}

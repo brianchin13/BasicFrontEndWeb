@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="UCCD2323-ASSIGNMENT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+
+    <link rel="stylesheet" href="./css/jquery.datetimepicker.min.css">
+
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+
+    <title>Register Form</title>
+    <link rel="manifest" href="./manifest.json">
+
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html" style=" padding-left: 20px;font-size: 30px"><img
+                src="images/logo.png" alt="logo"
+                style="margin: 1px 2px">eTuition</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Homepage</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="courses.html" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="courses.html">Web Programming</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Javascript Fundamentals</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Basic of Photo Editing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Discrete Mathematics</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Python Programming</a>
+                    </div>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item active">
+                    <button class="nav-link customBtn" onclick="window.location.href='registerForm.html'">Register Now
+                        <span id="courseCount" class="badge badge-warning"></span>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container" id="custom-container">
+    <h1 class="formTitle">eTuition Online Registration Form</h1>
+
+    <form class="registerForm justify-content-center" name="registerForm" role="form">
+        <div class="row">
+            <div class="col-half">
+                <h4>Student's User Information</h4>
+                <div class="input-group input-group-icon"><input type="text" placeholder="Full Name" name="FullName"
+                                                                 id="fullName"/>
+                    <div class="input-icon"><i class="fa fa-user"></i></div>
+                </div>
+                <div class="input-group input-group-icon"><input type="tel" placeholder="Contact Number"
+                                                                 name="ContactNumber" id="contactNum"/>
+                    <div class="input-icon"><i class="fa fa-phone"></i></div>
+                </div>
+                <div class="input-group input-group-icon"><input type="email" placeholder="Email Address" name="Email"
+                                                                 id="email"/>
+                    <div class="input-icon"><i class="fa fa-envelope"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-half">
+                <div class="input-group input-group-icon">
+                    <h4>Date of Birth</h4>
+                    <div class="input-group input-group-icon">
+                        <input type=text id="bDay" placeholder="Birth Date">
+                        <div class="input-icon"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-half">
+                <div class="input-group input-group-icon"></div>
+                <h4>Gender</h4>
+                <div class="input-group">
+                    <input id="gender-male" type="radio" name="gender" value="male" checked="true"/>
+                    <label for="gender-male">Male</label>
+                    <input id="gender-female" type="radio" name="gender" value="female"/>
+                    <label for="gender-female">Female</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-half">
+                <h4>Class Selection</h4>
+                <div class="input-group">
+                    <input id="faceToface" type="radio" name="classSelection" value="FaceToFaceSession" checked="true"/>
+                    <label for="faceToface"><span><i class="fa fa-users"></i>Face-to-Face Session</span></label>
+                    <input id="onlineSession" type="radio" name="classSelection" value="OnlineClass"/>
+                    <label for="onlineSession"> <span><i class="fa fa-laptop"></i>Online Session</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-half">
+                <h4>Subject Selection</h4>
+                <div class="input-group">
+
+                    <input id="selectFromCourse" type="radio" name="subjectSelectionType" value="fromCourse"
+                           checked="true"/>
+                    <label for="selectFromCourse"><span>Select from course</span></label>
+
+                    <input id="selectFromForm" type="radio" name="subjectSelectionType" value="fromForm"/>
+                    <label for="selectFromForm"><span>Select from form</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row selectFromSource" id="fromCourse">
+            <div class="col-half">
+                <h4>Select Form Course</h4>
+                <table class="table">
+                    <thead class="custom-thead">
+                    <tr>
+                        <th scope="col">Course ID</th>
+                        <th scope="col">Course Name</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row selectFromSource" id="fromForm" style="display: none">
+            <div class="col-half">
+                <h4>Select From Form</h4>
+                <div class="input-group ">
+                    <select id="subjects">
+                        <option value="WebProgramming">Web Programming</option>
+                        <option value="JavaScript">Javascript Fundamentals</option>
+                        <option value="PhotoshopEditing">Basic of Photo Editing</option>
+                        <option value="DiscreteMaths">Discrete Mathematics</option>
+                        <option value="PythonProgramming">Python Programming</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-half">
+                <div class="input-group ">
+                    <button type="button" id="register">Register Now</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+
+<footer>
+    <div class="copyright bg-light">
+        <p>&copy 2021 - eTuition Online Platform</p>
+    </div>
+</footer>
+
+
+<!--scripts-->
+
+<script src="./js/default.js"></script>
+<script src="./js/jquery.datetimepicker.full.min.js"></script>
+<script src="./js/sweetalert2.all.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        displayCourse();
+
+        //global var and set default value fromCourse
+        var source = "fromCourse";
+
+        $("input[name$='subjectSelectionType']").click(function () {
+            source = $(this).val();
+
+            $("div.selectFromSource").hide();
+            $("#" + source).show();
+
+        })
+
+        $('#register').button().click(function () {
+            registerData(source)
+        })
+
+    });
+</script>
+
+<script type=text/javascript>
+    $("#bDay").datetimepicker({
+        timepicker: false,
+        datepicker: true,
+        format: "d-m-y",
+        width: '700px',
+        padding: '10px'
+    });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="UCCD2323-ASSIGNMENT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/sweetalert2.min.css">
+    <script src="./js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+
+    <title>Contact Us</title>
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="homepage.html" style=" padding-left: 20px;font-size: 30px"><img
+                src="images/logo.png" alt="logo"
+                style="margin: 1px 2px">eTuition</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item">
+                    <a class="nav-link" href="homepage.html">Homepage</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="courses.html" id="navbarDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="courses.html">Web Programming</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Javascript Fundamentals</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Basic of Photo Editing</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Discrete Mathematics</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="courses.html">Python Programming</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link customBtn" onclick="window.location.href='registerForm.html'">Register Now
+                        <span id="courseCount" class="badge badge-warning"></span>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container" id="custom-container">
+
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="google"><i class="fa fa-google"></i></a>
+    </div>
+
+
+    <div class="pageTitleBox">
+        <div class="whiteBox">
+            <h1 class="movingTitle">Contact Us</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center">
+
+                <div class="col-md-6" style="text-align: center">
+                    <div class="workingHour text-white" style="background-image: url(images/infobg.jpeg)">
+
+                        <br><h4 style="text-decoration: underline">eTuition Office Hours</h4>
+
+                        <strong class="d-block text-warning">Monday - Friday</strong>
+                        <p>10:00 AM - 6:00 PM</p>
+
+                        <strong class="mt-3 d-block text-warning">Saturday</strong>
+                        <p>11:00 AM - 4:00 PM</p>
+
+                        <strong class="d-block text-warning">Sunday: Closed</strong><br><br>
+
+                        <h4 style="text-decoration: underline">Contacts</h4>
+                        <strong class="d-block text-warning">Office Number</strong>
+                        <p>Tel : 05-468-8888</p>
+                        <p>Fax : 05-368-8888</p>
+
+                        <strong class="mt-3 d-block text-warning">Email </strong>
+                        <a href="" style="color: white">eTuitionMail@1utar.my</a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                    <form class="mb-5" method="post" id="contactForm" name="contactForm">
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <h3 class="heading mb-4">How can we help you ?</h3>
+                                <p>For any enquiries, please email us using this form.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="ContactName" id="contactName" placeholder="Your name">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <input type="text" name="ContactEmail" id="contactEmail" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <textarea class="input-group" name="ContactMessage" id="contactMessage" cols="30"
+                                          rows="7" placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="input-group ">
+                                    <button type="button" onclick="submitContactForm(); ">Send Messsage</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- googleMap-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3978.3773150057486!2d101.1407858501875!3d4.340072645872281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cb1d573f9aabf3%3A0x28cc06c069e40dce!2sUniversiti%20Tunku%20Abdul%20Rahman%20Kampar%20Campus!5e0!3m2!1sen!2smy!4v1628959651797!5m2!1sen!2smy"
+                        width="100%" height="380px" style="border-radius: 5px;" allowfullscreen=""
+                        loading="lazy"></iframe>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<footer>
+    <div class="copyright bg-light">
+        <p>&copy 2021 - eTuition Online Platform</p>
+    </div>
+</footer>
+
+<!--scripts-->
+<script src="./js/default.js"></script>
+<script src="./js/anime.min.js"></script>
+<script src="./js/popper.min.js"></script>
+<script src="./js/sweetalert2.all.min.js"></script>
+
+<!-- script for moving text -->
+<script>
+    var textWrapper = document.querySelector('.movingTitle');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    anime.timeline()
+        .add({
+            targets: '.movingTitle .letter',
+            translateX: [40, 0],
+            translateZ: 0,
+            opacity: [0, 1],
+            easing: "easeOutExpo",
+            duration: 1200,
+            delay: (el, i) => 600 + 30 * i
+        })
+</script>
+
+<script src="./js/popper.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
